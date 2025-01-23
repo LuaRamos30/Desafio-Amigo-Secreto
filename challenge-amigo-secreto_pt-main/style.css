@@ -160,3 +160,13 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+
+/* Estilo para o botão quando ele está desabilitado */
+.button-draw:disabled {
+    background-color: #d3d3d3; /* Cor de fundo cinza */
+    color: #888; /* Cor do texto cinza */
+    cursor: not-allowed; /* Altera o cursor para indicar que não é clicável */
+    border: 1px solid #ccc; /* Borda mais suave */
+  }
+  
