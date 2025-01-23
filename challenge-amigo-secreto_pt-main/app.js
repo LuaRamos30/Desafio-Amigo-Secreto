@@ -1,4 +1,5 @@
 let listaAmigos = []; //array vazio para armazenar os amigos
+let amigosSorteados = []; // array para armazenar os amigos já sorteados
 
 
 
@@ -28,6 +29,7 @@ function adicionarAmigo() {
   }
 
   listaAmigos.push(inputAmigo); //adiciona o nome do amigo no array
+  amigosSorteados = []; //limpa a lista de amigos sorteados
 
   atualizarAmigos(); //atualiza a lista de amigos
     atualizarBotaoSortear(); //atualiza o botão sortear
@@ -57,18 +59,35 @@ function atualizarAmigos() {
 
 
 
+//função para sortear amigo
 function sortearAmigo() {
-  if (listaAmigos.length === 0) { //verificar se a lista de amigos está vazia
-    alert("Adicione amigos antes de sortear!");
-    return;
+    if (listaAmigos.length === 0) { //verificar se a lista de amigos está vazia
+      alert("Adicione amigos antes de sortear!");
+      return;
+    }
+  
+    //verifica se todos os amigos já foram sorteados
+    if (amigosSorteados.length === listaAmigos.length) {
+      alert("Todos os amigos já foram sorteados!");
+      return;
+    }
+  
+    let amigoSelecionado;
+  
+    //sorteia um amigo que ainda não foi sorteado
+    do {
+      amigoSelecionado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
+    } while (amigosSorteados.includes(amigoSelecionado)); //repete se o amigo já foi sorteado
+  
+    amigosSorteados.push(amigoSelecionado); //adiciona o amigo sorteado ao array de amigos sorteados
+  
+    //exibe o amigo sorteado
+    document.getElementById(
+      "resultado"
+    ).innerHTML = `Amigo Sorteado: ${amigoSelecionado}`; //mostrar o amigo sorteado na tela
+  
+    atualizarBotaoSortear(); //atualiza o botão após o sorteio
   }
-
-  let amigoSorteado = 
-    listaAmigos[Math.floor(Math.random() * listaAmigos.length)]; //sortear um amigo
-  document.getElementById( //pegar o elemento com id
-    "resultado"
-  ).innerHTML = `Amigo Sorteado: ${amigoSorteado}`; //mostrar o amigo sorteado na tela
-}
 
 
 // Adicionando o evento para pressionar "Enter"
