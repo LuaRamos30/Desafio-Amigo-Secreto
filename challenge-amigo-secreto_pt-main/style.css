@@ -1,10 +1,10 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
+    --color-primary: rgb(205, 147, 193);
+    --color-secondary: rgb(255, 235, 252);
+    --color-tertiary: rgb(255, 75, 240);
+    --color-button: rgb(255, 75, 240);
+    --color-button-hover: rgb(194, 2, 159);
+    --color-text: rgb(40, 40, 40);
     --color-white: #FFFFFF;
 }
 
@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Montserrat", serif;
 }
 
 .main-content {
@@ -43,7 +44,6 @@ body {
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -55,14 +55,14 @@ body {
 /* Títulos */
 .main-title {
     font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
+    font-family: "Montserrat", serif;
+    font-weight: 800;
     font-style: italic;
     color: var(--color-white);
 }
 
 .section-title {
-    font-family: "Inter", serif;
+    font-family: "Montserrat", serif;
     font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
@@ -100,14 +100,21 @@ body {
     border: 2px solid #333;
     border-right: none;
     border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+input:focus{
+    border-color:rgb(255, 75, 240); /* Cor da borda no focus */
+    box-shadow: 0 0 10px rgb(255, 75, 240);; /* Brilho ao redor */
 }
 
 /* Estilos de botão */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", serif;
+    font-weight: 700;
     font-size: 16px;
     border: 2px solid #000;
     border-radius: 25px;
@@ -117,26 +124,30 @@ button {
 
 .button-add {
     background-color: var(--color-tertiary);
-    color: var(--color-text);
+    color: white;
     border-radius: 0 25px 25px 0;
+    transition:  0.5s;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    color: var( --color-text);
+   
+    background-color:rgb(255, 181, 249);
 }
 
 /* Listas */
 ul {
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", serif;
+    font-weight:500;
     font-size: 18px;
     margin: 20px 0;
 }
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color:var(--color-primary);
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -151,7 +162,27 @@ ul {
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    
+    transition:  0.5s;
 }
+
+
+
+.img-amigo{
+    height: 45vh;
+    padding:0;
+    display:block;
+}
+
+.imagem{
+    position: relative;
+    display: flex;
+    padding:0;
+}
+
+
+
+
 
 .button-draw img {
     margin-right: 40px;
@@ -169,4 +200,7 @@ ul {
     cursor: not-allowed; /* Altera o cursor para indicar que não é clicável */
     border: 1px solid #ccc; /* Borda mais suave */
   }
+  
+
+
   
