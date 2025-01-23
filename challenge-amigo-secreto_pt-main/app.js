@@ -44,6 +44,10 @@ function adicionarAmigo() {
 function atualizarAmigos() {
   document.getElementById("listaAmigos").innerHTML = ""; //limpar a lista de amigos
 
+    listaAmigos.sort(); //ordenar a lista de amigos
+
+
+
   listaAmigos.forEach((amigo) => { //para cada amigo na lista de amigos
     let li = document.createElement("li"); //criar um elemento li
     li.innerHTML = amigo; //adicionar o nome do amigo no li
@@ -66,6 +70,13 @@ function sortearAmigo() {
   ).innerHTML = `Amigo Sorteado: ${amigoSorteado}`; //mostrar o amigo sorteado na tela
 }
 
+
+// Adicionando o evento para pressionar "Enter"
+document.getElementById('amigo').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') { // Verifica se a tecla pressionada foi Enter
+      adicionarAmigo(); // Adiciona o amigo ao pressionar Enter
+    }
+  });
 
 
 // Adiciona um evento que executa a função 'atualizarBotaoSortear' assim que o documento HTML estiver completamente carregado.
