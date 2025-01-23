@@ -1,206 +1,218 @@
 :root {
-    --color-primary: rgb(205, 147, 193);
-    --color-secondary: rgb(255, 235, 252);
-    --color-tertiary: rgb(255, 75, 240);
-    --color-button: rgb(255, 75, 240);
-    --color-button-hover: rgb(194, 2, 159);
-    --color-text: rgb(40, 40, 40);
-    --color-white: #FFFFFF;
+  --color-primary: rgb(205, 147, 193);
+  --color-secondary: rgb(255, 235, 252);
+  --color-tertiary: rgb(255, 75, 240);
+  --color-button: rgb(255, 75, 240);
+  --color-button-hover: rgb(194, 2, 159);
+  --color-text: rgb(40, 40, 40);
+  --color-white: #ffffff;
 }
 
 /* Estilos gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Montserrat", serif;
+  height: 100vh;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", serif;
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 /* Banner */
 .header-banner {
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
+  flex: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 0;
 }
 
 /* Seção de entrada */
 .input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border-radius: 64px 64px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
+  flex: 60%;
+  background-color: var(--color-secondary);
+  border-radius: 64px 64px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
 }
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Montserrat", serif;
-    font-weight: 800;
-    font-style: italic;
-    color: var(--color-white);
+  font-size: 48px;
+  font-family: "Montserrat", serif;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--color-white);
 }
 
 .section-title {
-    font-family: "Montserrat", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
-    text-align: center;
+  font-family: "Montserrat", serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 10px 0;
+  text-align: center;
 }
 
 /* Contêineres de entrada e botão */
 .input-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
 }
 
 .input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
 }
 
+/* Contêiner de botões, alinhando-os lado a lado */
 .button-container {
-    width: 300px;
+    display: flex;
     justify-content: center;
+    gap: 20px; /* Espaçamento entre os botões */
 }
 
 /* Estilos de entrada de texto */
 .input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Montserrat", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-right: none;
+  border-radius: 25px 0 0 25px;
+  font-family: "Montserrat", serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
-input:focus{
-    border-color:rgb(255, 75, 240); /* Cor da borda no focus */
-    box-shadow: 0 0 10px rgb(255, 75, 240);; /* Brilho ao redor */
+input:focus {
+  border-color: rgb(255, 75, 240); /* Cor da borda no focus */
+  box-shadow: 0 0 10px rgb(255, 75, 240); /* Brilho ao redor */
 }
 
 /* Estilos de botão */
 button {
-    padding: 15px 30px;
-    font-family: "Montserrat", serif;
-    font-weight: 700;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+  padding: 15px 30px;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: white;
-    border-radius: 0 25px 25px 0;
-    transition:  0.5s;
+  background-color: var(--color-tertiary);
+  color: white;
+  border-radius: 0 25px 25px 0;
+  transition: 0.5s;
 }
 
 .button-add:hover {
-    color: var( --color-text);
-   
-    background-color:rgb(255, 181, 249);
+  color: var(--color-text);
+
+  background-color: rgb(255, 181, 249);
 }
+
 
 /* Listas */
 ul {
-    list-style-type: none;
-    color: var(--color-text);
-    font-family: "Montserrat", serif;
-    font-weight:500;
-    font-size: 18px;
-    margin: 20px 0;
+  list-style-type: none;
+  color: var(--color-text);
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 20px 0;
 }
 
 .result-list {
-    margin-top: 15px;
-    color:var(--color-primary);
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
+  margin-top: 15px;
+  color: var(--color-primary);
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Botão de sortear título */
 .button-draw {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
-    
-    transition:  0.5s;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 40px;
+  color: var(--color-white);
+  background-color: var(--color-button);
+  font-size: 16px;
+
+  transition: 0.5s;
 }
 
-
-
-.img-amigo{
-    height: 45vh;
-    padding:0;
-    display:block;
+.img-amigo {
+  height: 45vh;
+  padding: 0;
+  display: block;
 }
 
-.imagem{
-    position: relative;
-    display: flex;
-    padding:0;
+.imagem {
+  position: relative;
+  display: flex;
+  padding: 0;
 }
-
-
-
-
 
 .button-draw img {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .button-draw:hover {
-    background-color: var(--color-button-hover);
+  background-color: var(--color-button-hover);
 }
-
+.button-draw:active {
+    transform: scale(0.95);
+}
 
 /* Estilo para o botão quando ele está desabilitado */
 .button-draw:disabled {
-    background-color: #d3d3d3; /* Cor de fundo cinza */
-    color: #888; /* Cor do texto cinza */
-    cursor: not-allowed; /* Altera o cursor para indicar que não é clicável */
-    border: 1px solid #ccc; /* Borda mais suave */
-  }
-  
+  background-color: #d3d3d3; /* Cor de fundo cinza */
+  color: #888; /* Cor do texto cinza */
+  cursor: not-allowed; /* Altera o cursor para indicar que não é clicável */
+  border: 1px solid #ccc; /* Borda mais suave */
+}
 
 
-  
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+    /* Esconde a imagem .img-amigo */
+    .img-amigo {
+        display: none;
+    }
+
+    /* Estilo adicional para .input-section */
+    .input-section {
+        width: 100%;
+    }
+
+    .main-title{
+        text-align: center;
+    }
+}

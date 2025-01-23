@@ -98,5 +98,16 @@ document.getElementById('amigo').addEventListener('keypress', function(event) {
   });
 
 
+  // Função para novo sorteio
+function novoSorteio() {
+    // Limpa o resultado atual (se houver)
+    document.getElementById('resultado').innerHTML = '';
+    document.getElementById('listaAmigos').innerHTML = '';
+
+    // Se você precisar reiniciar a lista de amigos ou realizar outra ação, você pode fazer aqui
+    alert('Novo sorteio iniciado!');
+}
+
+
 // Adiciona um evento que executa a função 'atualizarBotaoSortear' assim que o documento HTML estiver completamente carregado.
 document.addEventListener("DOMContentLoaded", atualizarBotaoSortear);
