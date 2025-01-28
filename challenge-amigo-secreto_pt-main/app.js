@@ -103,6 +103,12 @@ function novoSorteio() {
     // Limpa o resultado atual (se houver)
     document.getElementById('resultado').innerHTML = '';
     document.getElementById('listaAmigos').innerHTML = '';
+    document.getElementById('amigo').value = '';
+
+     // Limpa a lista de amigos e sorteios
+     listaAmigos = [];
+     amigosSorteados = [];
+    atualizarBotaoSortear(); // Atualiza o botão de sorteio
 
     // Se você precisar reiniciar a lista de amigos ou realizar outra ação, você pode fazer aqui
     alert('Novo sorteio iniciado!');

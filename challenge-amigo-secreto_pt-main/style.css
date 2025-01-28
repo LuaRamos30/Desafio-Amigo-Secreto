@@ -82,16 +82,16 @@ body {
 .input-name {
   width: 100%;
   padding: 10px;
-  border: 2px solid #000;
+  border: 2px solid #fff;
   border-radius: 25px 0 0 25px;
   font-size: 16px;
 }
 
 /* Contêiner de botões, alinhando-os lado a lado */
 .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaçamento entre os botões */
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os botões */
 }
 
 /* Estilos de entrada de texto */
@@ -99,7 +99,7 @@ body {
   flex: 1;
   padding: 10px 15px;
   font-size: 16px;
-  border: 2px solid #333;
+  border: 2px solid fff;
   border-right: none;
   border-radius: 25px 0 0 25px;
   font-family: "Montserrat", serif;
@@ -107,6 +107,7 @@ body {
 }
 
 input:focus {
+  border: 2px solid #fff;
   border-color: rgb(255, 75, 240); /* Cor da borda no focus */
   box-shadow: 0 0 10px rgb(255, 75, 240); /* Brilho ao redor */
 }
@@ -117,7 +118,7 @@ button {
   font-family: "Montserrat", serif;
   font-weight: 700;
   font-size: 16px;
-  border: 2px solid #000;
+  border: 2px solid #fff;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -135,7 +136,6 @@ button {
 
   background-color: rgb(255, 181, 249);
 }
-
 
 /* Listas */
 ul {
@@ -188,7 +188,7 @@ ul {
   background-color: var(--color-button-hover);
 }
 .button-draw:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 /* Estilo para o botão quando ele está desabilitado */
@@ -196,23 +196,58 @@ ul {
   background-color: #d3d3d3; /* Cor de fundo cinza */
   color: #888; /* Cor do texto cinza */
   cursor: not-allowed; /* Altera o cursor para indicar que não é clicável */
-  border: 1px solid #ccc; /* Borda mais suave */
+  border: 1px solid #fff; /* Borda mais suave */
 }
 
 
 /* Media query para telas menores que 768px */
 @media (max-width: 768px) {
-    /* Esconde a imagem .img-amigo */
-    .img-amigo {
-        display: none;
-    }
+  /* Esconde a imagem .img-amigo */
+  .img-amigo {
+    display: none;
+  }
 
-    /* Estilo adicional para .input-section */
-    .input-section {
-        width: 100%;
-    }
+  /* Estilo adicional para .input-section */
+  .input-section {
+    width: 100%;
+    min-height: 50vh; /* Garante altura suficiente */
+  }
 
-    .main-title{
-        text-align: center;
-    }
+  .main-title {
+    text-align: center;
+    font-size: 36px; /* Reduz o tamanho do título */
+  }
+
+  .section-title {
+    font-size: 28px; /* Ajusta o subtítulo */
+  }
+
+  .button-container {
+    display: grid; /* Usa grid layout para botões */
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* Espaçamento entre botões */
+  }
+
+  .button-draw {
+    padding: 8px 20px; /* Reduz o tamanho dos botões */
+    font-size: 14px; /* Ajusta o tamanho da fonte dos botões */
+  }
+
+  .input-name {
+    padding: 8px; /* Ajusta o espaço interno do input */
+    font-size: 14px; /* Reduz o tamanho da fonte do input */
+  }
 }
+
+/* Media query para telas menores que 400px */
+@media (max-width: 400px) {
+  .button-container {
+    flex-direction: column; /* Empilha os botões */
+    gap: 10px; /* Espaço entre os botões */
+  }
+
+  .input-name {
+    font-size: 12px; /* Reduz ainda mais o texto nos inputs */
+  }
+}
+
